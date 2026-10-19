@@ -1,0 +1,17 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.lockdir/
+x402-state/
+coverage/
+.DS_Store
+npm-debug.log*
