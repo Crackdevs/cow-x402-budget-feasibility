@@ -1,0 +1,18 @@
+{
+  "name": "cow-x402-quarantine-recovery-proof",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --import ./network-guard.mjs --test --test-reporter=tap --test-concurrency=1 test/recovery.test.mjs"
+  },
+  "dependencies": {
+    "@x402/core": "2.28.0",
+    "@x402/evm": "2.28.0",
+    "@x402/fetch": "2.28.0",
+    "viem": "2.48.11"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

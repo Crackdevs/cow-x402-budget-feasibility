@@ -1,0 +1,283 @@
+TAP version 13
+# Subtest: 01 external fetch and sockets are blocked before SDK tests
+ok 1 - 01 external fetch and sockets are blocked before SDK tests
+  ---
+  duration_ms: 2.069192
+  type: 'test'
+  ...
+# Subtest: 02 native SDK permits two 1-USDC deposits despite a conceptual 1.5-USDC aggregate cap
+ok 2 - 02 native SDK permits two 1-USDC deposits despite a conceptual 1.5-USDC aggregate cap
+  ---
+  duration_ms: 23.998103
+  type: 'test'
+  ...
+# Subtest: 03 actual x402Client + wrapFetch + scheme obey adapter 1.5-USDC plan cap
+ok 3 - 03 actual x402Client + wrapFetch + scheme obey adapter 1.5-USDC plan cap
+  ---
+  duration_ms: 33.851607
+  type: 'test'
+  ...
+# Subtest: 04 SDK awaits asynchronous depositStrategy; committed reservation precedes actual signer entry
+ok 4 - 04 SDK awaits asynchronous depositStrategy; committed reservation precedes actual signer entry
+  ---
+  duration_ms: 27.078059
+  type: 'test'
+  ...
+# Subtest: 05 process restart preserves original commitment and rejects second deposit
+ok 5 - 05 process restart preserves original commitment and rejects second deposit
+  ---
+  duration_ms: 454.863096
+  type: 'test'
+  ...
+# Subtest: 06 concurrent adapter instances serialize full request and cannot over-authorize
+ok 6 - 06 concurrent adapter instances serialize full request and cannot over-authorize
+  ---
+  duration_ms: 21.760851
+  type: 'test'
+  ...
+# Subtest: 07 two independent Node processes share the same durable cap and lock
+ok 7 - 07 two independent Node processes share the same durable cap and lock
+  ---
+  duration_ms: 411.602037
+  type: 'test'
+  ...
+# Subtest: 08 changed channel salt cannot reset aggregate plan budget
+ok 8 - 08 changed channel salt cannot reset aggregate plan budget
+  ---
+  duration_ms: 24.988631
+  type: 'test'
+  ...
+# Subtest: 09 timeout after paid payload preserves gross reservation and blocks retries
+ok 9 - 09 timeout after paid payload preserves gross reservation and blocks retries
+  ---
+  duration_ms: 13.635509
+  type: 'test'
+  ...
+# Subtest: 10 signer failure is conservatively uncertain and cannot refund the cap
+ok 10 - 10 signer failure is conservatively uncertain and cannot refund the cap
+  ---
+  duration_ms: 9.054334
+  type: 'test'
+  ...
+# Subtest: 11 hard process exit at first signer leaves a durable reservation and stale lock
+ok 11 - 11 hard process exit at first signer leaves a durable reservation and stale lock
+  ---
+  duration_ms: 468.9946
+  type: 'test'
+  ...
+# Subtest: 12 missing journal is never silently created and removal while open fails closed
+ok 12 - 12 missing journal is never silently created and removal while open fails closed
+  ---
+  duration_ms: 1.820087
+  type: 'test'
+  ...
+# Subtest: 13 corrupt journal and missing schema reject before signing
+ok 13 - 13 corrupt journal and missing schema reject before signing
+  ---
+  duration_ms: 1.291712
+  type: 'test'
+  ...
+# Subtest: 14 native funded-channel vouchers skip depositStrategy; false does not abort signing
+ok 14 - 14 native funded-channel vouchers skip depositStrategy; false does not abort signing
+  ---
+  duration_ms: 5.873101
+  type: 'test'
+  ...
+# Subtest: 15 adapter checks voucher-only cap and does not double-count vouchers as deposits
+ok 15 - 15 adapter checks voucher-only cap and does not double-count vouchers as deposits
+  ---
+  duration_ms: 26.544765
+  type: 'test'
+  ...
+# Subtest: 16 voucher regression caused by stale channel state is blocked before signer
+ok 16 - 16 voucher regression caused by stale channel state is blocked before signer
+  ---
+  duration_ms: 22.869325
+  type: 'test'
+  ...
+# Subtest: 17 validation runs on voucher-only requests: changed receiver, token, network, authorizer, delay and domains fail
+    # Subtest: receiver
+    ok 1 - receiver
+      ---
+      duration_ms: 15.130832
+      type: 'test'
+      ...
+    # Subtest: token
+    ok 2 - token
+      ---
+      duration_ms: 17.21674
+      type: 'test'
+      ...
+    # Subtest: network
+    ok 3 - network
+      ---
+      duration_ms: 10.199644
+      type: 'test'
+      ...
+    # Subtest: authorizer
+    ok 4 - authorizer
+      ---
+      duration_ms: 15.084542
+      type: 'test'
+      ...
+    # Subtest: withdrawDelay
+    ok 5 - withdrawDelay
+      ---
+      duration_ms: 13.994303
+      type: 'test'
+      ...
+    # Subtest: name
+    ok 6 - name
+      ---
+      duration_ms: 11.745428
+      type: 'test'
+      ...
+    # Subtest: version
+    ok 7 - version
+      ---
+      duration_ms: 12.01882
+      type: 'test'
+      ...
+    # Subtest: transfer
+    ok 8 - transfer
+      ---
+      duration_ms: 12.06975
+      type: 'test'
+      ...
+    1..8
+ok 17 - 17 validation runs on voucher-only requests: changed receiver, token, network, authorizer, delay and domains fail
+  ---
+  duration_ms: 109.46461
+  type: 'test'
+  ...
+# Subtest: 18 actual deposit and voucher typed-data domains and hashed channel nonce match pins
+ok 18 - 18 actual deposit and voucher typed-data domains and hashed channel nonce match pins
+  ---
+  duration_ms: 12.784559
+  type: 'test'
+  ...
+# Subtest: 19 missing SDK snapshot for previously acknowledged channel fails closed without chain reconstruction
+ok 19 - 19 missing SDK snapshot for previously acknowledged channel fails closed without chain reconstruction
+  ---
+  duration_ms: 16.894446
+  type: 'test'
+  ...
+# Subtest: 20 closing/reopening same channel retains issuance history and refuses automatic reopen
+ok 20 - 20 closing/reopening same channel retains issuance history and refuses automatic reopen
+  ---
+  duration_ms: 15.054122
+  type: 'test'
+  ...
+# Subtest: 21 rollover changes only period allocation; original reservations and channel voucher history remain
+ok 21 - 21 rollover changes only period allocation; original reservations and channel voucher history remain
+  ---
+  duration_ms: 28.456926
+  type: 'test'
+  ...
+# Subtest: 22 rollover does not clear unresolved previous-period authorizations
+ok 22 - 22 rollover does not clear unresolved previous-period authorizations
+  ---
+  duration_ms: 10.571656
+  type: 'test'
+  ...
+# Subtest: 23 unverified refund cannot replenish gross caps or erase voucher history
+ok 23 - 23 unverified refund cannot replenish gross caps or erase voucher history
+  ---
+  duration_ms: 13.647053
+  type: 'test'
+  ...
+# Subtest: 24 missing or failed receipt leaves signed authorizations uncertain
+    # Subtest: missing-receipt
+    ok 1 - missing-receipt
+      ---
+      duration_ms: 8.712164
+      type: 'test'
+      ...
+    # Subtest: failed
+    ok 2 - failed
+      ---
+      duration_ms: 9.944526
+      type: 'test'
+      ...
+    1..2
+ok 24 - 24 missing or failed receipt leaves signed authorizations uncertain
+  ---
+  duration_ms: 19.043608
+  type: 'test'
+  ...
+# Subtest: 25 policy changes cannot silently reset existing journal accounting
+ok 25 - 25 policy changes cannot silently reset existing journal accounting
+  ---
+  duration_ms: 1.006156
+  type: 'test'
+  ...
+# Subtest: 26 official file-backed channel storage still allows native aggregate overspend across restart
+ok 26 - 26 official file-backed channel storage still allows native aggregate overspend across restart
+  ---
+  duration_ms: 18.174776
+  type: 'test'
+  ...
+# Subtest: 27 CoW-style per-deposit callback and durable native channel storage still do not aggregate plan budgets
+ok 27 - 27 CoW-style per-deposit callback and durable native channel storage still do not aggregate plan budgets
+  ---
+  duration_ms: 6.551272
+  type: 'test'
+  ...
+# Subtest: 28 process exits at later authorization boundaries retain commitment and block fresh signing
+    # Subtest: crash-at-voucher
+    ok 1 - crash-at-voucher
+      ---
+      duration_ms: 393.879314
+      type: 'test'
+      ...
+    # Subtest: crash-at-paid-send
+    ok 2 - crash-at-paid-send
+      ---
+      duration_ms: 459.548085
+      type: 'test'
+      ...
+    # Subtest: crash-after-receipt-update
+    ok 3 - crash-after-receipt-update
+      ---
+      duration_ms: 465.397247
+      type: 'test'
+      ...
+    1..3
+ok 28 - 28 process exits at later authorization boundaries retain commitment and block fresh signing
+  ---
+  duration_ms: 1319.977396
+  type: 'test'
+  ...
+# Subtest: 29 semantic journal corruption cannot delete a reservation and replenish cap
+ok 29 - 29 semantic journal corruption cannot delete a reservation and replenish cap
+  ---
+  duration_ms: 17.02001
+  type: 'test'
+  ...
+# Subtest: 30 inconsistent cumulative receipt fails before native storage mutation and remains uncertain
+ok 30 - 30 inconsistent cumulative receipt fails before native storage mutation and remains uncertain
+  ---
+  duration_ms: 10.969267
+  type: 'test'
+  ...
+# Subtest: 31 signer guard rejects changed type schema, deadline, and exact voucher value (unit boundary checks)
+ok 31 - 31 signer guard rejects changed type schema, deadline, and exact voucher value (unit boundary checks)
+  ---
+  duration_ms: 16.796486
+  type: 'test'
+  ...
+# Subtest: 32 native corrective-402 recovery cannot create a second authorization without reconciliation
+ok 32 - 32 native corrective-402 recovery cannot create a second authorization without reconciliation
+  ---
+  duration_ms: 10.818253
+  type: 'test'
+  ...
+1..32
+# tests 45
+# suites 0
+# pass 45
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3566.672665

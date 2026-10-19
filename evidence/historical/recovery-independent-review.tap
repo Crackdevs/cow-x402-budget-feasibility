@@ -1,0 +1,181 @@
+TAP version 13
+# Subtest: 01 actual process interruption, explicit quarantine, and useful fresh-channel continuation
+ok 1 - 01 actual process interruption, explicit quarantine, and useful fresh-channel continuation
+  ---
+  duration_ms: 443.820431
+  type: 'test'
+  ...
+# Subtest: 02 fresh identity cannot exceed original 1.5-USDC gross cap
+ok 2 - 02 fresh identity cannot exceed original 1.5-USDC gross cap
+  ---
+  duration_ms: 361.904912
+  type: 'test'
+  ...
+# Subtest: 03 four real abrupt-exit boundaries retain authority across explicit quarantine
+    # Subtest: first-signer
+    ok 1 - first-signer
+      ---
+      duration_ms: 380.659961
+      type: 'test'
+      ...
+    # Subtest: voucher-signer
+    ok 2 - voucher-signer
+      ---
+      duration_ms: 390.88815
+      type: 'test'
+      ...
+    # Subtest: paid-send
+    ok 3 - paid-send
+      ---
+      duration_ms: 394.896967
+      type: 'test'
+      ...
+    # Subtest: receipt-update
+    ok 4 - receipt-update
+      ---
+      duration_ms: 392.183865
+      type: 'test'
+      ...
+    1..4
+ok 3 - 03 four real abrupt-exit boundaries retain authority across explicit quarantine
+  ---
+  duration_ms: 1560.335351
+  type: 'test'
+  ...
+# Subtest: 04 retired identity remains permanently blocked after fresh-channel progress and restart
+ok 4 - 04 retired identity remains permanently blocked after fresh-channel progress and restart
+  ---
+  duration_ms: 395.785915
+  type: 'test'
+  ...
+# Subtest: 05 removal of reservations, attempts, high-water or retirement evidence is detected
+    # Subtest: reservation
+    ok 1 - reservation
+      ---
+      duration_ms: 406.662521
+      type: 'test'
+      ...
+    # Subtest: attempts
+    ok 2 - attempts
+      ---
+      duration_ms: 368.053571
+      type: 'test'
+      ...
+    # Subtest: high
+    ok 3 - high
+      ---
+      duration_ms: 371.512541
+      type: 'test'
+      ...
+    # Subtest: retirement
+    ok 4 - retirement
+      ---
+      duration_ms: 373.349727
+      type: 'test'
+      ...
+    # Subtest: lifecycle
+    ok 5 - lifecycle
+      ---
+      duration_ms: 387.043866
+      type: 'test'
+      ...
+    1..5
+ok 5 - 05 removal of reservations, attempts, high-water or retirement evidence is detected
+  ---
+  duration_ms: 1908.941539
+  type: 'test'
+  ...
+# Subtest: 06 observed refund uncertainty never replenishes allowance or erases quarantined voucher history
+ok 6 - 06 observed refund uncertainty never replenishes allowance or erases quarantined voucher history
+  ---
+  duration_ms: 345.722867
+  type: 'test'
+  ...
+# Subtest: 07 absent, failing or malformed channel reads cannot be converted into a new empty channel
+    # Subtest: unknown
+    ok 1 - unknown
+      ---
+      duration_ms: 365.675639
+      type: 'test'
+      ...
+    # Subtest: timeout
+    ok 2 - timeout
+      ---
+      duration_ms: 391.276786
+      type: 'test'
+      ...
+    # Subtest: string zero
+    ok 3 - string zero
+      ---
+      duration_ms: 363.75893
+      type: 'test'
+      ...
+    # Subtest: negative
+    ok 4 - negative
+      ---
+      duration_ms: 359.687795
+      type: 'test'
+      ...
+    1..4
+ok 7 - 07 absent, failing or malformed channel reads cannot be converted into a new empty channel
+  ---
+  duration_ms: 1481.806026
+  type: 'test'
+  ...
+# Subtest: 08 funded or historical chain state is refused instead of imported
+ok 8 - 08 funded or historical chain state is refused instead of imported
+  ---
+  duration_ms: 370.535373
+  type: 'test'
+  ...
+# Subtest: 09 quarantine requires explicit operator decision, clean lock, and retained known journal
+ok 9 - 09 quarantine requires explicit operator decision, clean lock, and retained known journal
+  ---
+  duration_ms: 14.127269
+  type: 'test'
+  ...
+# Subtest: 10 arbitrary replacement salt is rejected; only recorded generated replacement is accepted
+ok 10 - 10 arbitrary replacement salt is rejected; only recorded generated replacement is accepted
+  ---
+  duration_ms: 349.477435
+  type: 'test'
+  ...
+# Subtest: 11 uncertainty on replacement still freezes new signing until another explicit decision
+ok 11 - 11 uncertainty on replacement still freezes new signing until another explicit decision
+  ---
+  duration_ms: 398.498384
+  type: 'test'
+  ...
+# Subtest: 12 next-period continuation retains prior reservation in its original period and plan
+ok 12 - 12 next-period continuation retains prior reservation in its original period and plan
+  ---
+  duration_ms: 571.174413
+  type: 'test'
+  ...
+# Subtest: 13 strict monotone policy intentionally rejects lower next dynamic-price ceiling
+ok 13 - 13 strict monotone policy intentionally rejects lower next dynamic-price ceiling
+  ---
+  duration_ms: 20.763936
+  type: 'test'
+  ...
+# Subtest: 14 delayed SDK success/refund hooks cannot unlock retired authorization or erase history
+ok 14 - 14 delayed SDK success/refund hooks cannot unlock retired authorization or erase history
+  ---
+  duration_ms: 376.188633
+  type: 'test'
+  ...
+# Subtest: 15 operator quarantine is refused while the old transport is still in flight
+ok 15 - 15 operator quarantine is refused while the old transport is still in flight
+  ---
+  duration_ms: 14.966681
+  type: 'test'
+  ...
+1..15
+# tests 28
+# suites 0
+# pass 28
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 8983.9809

@@ -1,0 +1,18 @@
+{
+  "crashExit": 75,
+  "oldAttemptState": "exposed",
+  "oldHigh": "1000",
+  "quarantinedChannel": "0x7c8a7e43184c842fefefa202fc7b8e2253f4bcc78eab825c1efd3049f83a3347",
+  "newChannel": "0xe15424546f5998c2e154543fa10a6d4bdc01de26d675df04a6b7ffee22d5f699",
+  "newPayloadTypes": [
+    "deposit",
+    "voucher"
+  ],
+  "gross": {
+    "plan": "2000000",
+    "byPeriod": {
+      "2026-10": "2000000"
+    }
+  },
+  "retainedReservationCount": 2
+}
